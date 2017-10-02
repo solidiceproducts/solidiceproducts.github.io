@@ -1,0 +1,45 @@
+---
+layout: default
+title: Nachrichten
+canonical_url: http://solidice-products.com/portfolio/
+---
+<div class="posts">
+  {% for post in paginator.posts %}
+    <article class="post">
+
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+<div class="pagination ta-c">
+  {% if paginator.previous_page %}
+    <a href="{{ site.baseurl }}/portfolio/" class="previouspagearrow">&laquo;</a>
+    <a href="{{ paginator.previous_page_path }}" class="previouspagearrow">&lsaquo;</a>
+  {% endif %}
+  <span class="page_number fw-b">Seite {{ paginator.page }} von {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="nextpagearrow">&rsaquo;</a>
+    <a href="{{ site.baseurl }}/portfolio/page{{ paginator.total_pages }}/" class="nextpagearrow">&raquo;</a>
+  {% endif %}
+</div>
+<div class="pagination ta-c">
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <b>{{ page }}</b>
+    {% elsif page == 1 %}
+    <!--
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    -->
+      <a href="{{ site.baseurl }}/portfolio/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+</div>
