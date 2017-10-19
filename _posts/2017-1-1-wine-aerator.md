@@ -2,7 +2,7 @@
 layout: post
 title: Wine Aerator with Chill Rod
 categories: [abc, def]
-canonical_url: https://solidice-products.com/portfolio/wine-aerator.html
+canonical_url: https://solidice-products.com/portfolio/wine-aerator-with-chill-rod.html
 ---
 
 <b>Treat your guests well. Serve them a perfectly aerated and pleasantly chilled wine with the SOLIDICE Wine Aerator.</b> <a target="_blank" rel="nofollow" href="https://www.amazon.com/dp/B01MA61N82/?tag=solidice-20">Buy on Amazon now</a>
